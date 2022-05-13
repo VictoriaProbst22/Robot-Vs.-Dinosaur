@@ -21,9 +21,9 @@ class Battlefield:
         #VOID FUNCTION
 
     def battle_phase(self):
-        if robot_attack and Dinosaur.health <= 50:
+        if Robot.robot_attack and Dinosaur.health <= 50:
             print(f"Dinosaur Lost Health!")
-        elif dinosaur_attack and Robot.health <= 50:
+        elif Dinosaur.dinosaur_attack and Robot.health <= 50:
             print("Robots Health is Decreasing!")
         else:
             print('Incoming!')
