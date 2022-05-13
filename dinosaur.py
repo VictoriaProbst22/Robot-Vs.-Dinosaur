@@ -7,9 +7,15 @@ class Dinosaur:
         self.name = 'Reptar'
         self.attack_power = 10
         self.health = 100
+        
+
+
+    def dinosaur_attack(self, Robot):
+       dinosaur_attack = Robot.health - self.attack_power
+     
 
 
 
-    def attack(self, Robot):
-        pass
+
         #VOID FUNCTION
+        #

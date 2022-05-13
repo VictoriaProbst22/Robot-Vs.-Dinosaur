@@ -1,13 +1,26 @@
+from weapons import Weapons
+
 from dinosaur import Dinosaur
 
-from weapons import Weapons
 
 class Robot:
 
-     def __init__(self):
-        self.name = 'Hugo'
-        self.health = 100 
-        self.active_weapon : Weapons()
-      
-      def attack_sequence(self, Dinosaur):
-         pass
+  def __init__(self):
+    self.name = 'Hugo'
+    self.health = 100
+    self.weapon = Weapons()
+
+
+
+  def robot_attack(self, Dinosaur):
+    robot_attack = Dinosaur.health(100) - Weapons.attack_power
+    
+
+
+
+
+
+
+
+    #i know i want to include the weapon of choice + attack power
+    #i want the attack power to decrease the self.health of the oppenant
