@@ -1,6 +1,3 @@
-from robot import Robot
-
-
 class Dinosaur:
 
     def __init__(self):
@@ -10,9 +7,15 @@ class Dinosaur:
         
 
 
-    def dinosaur_attack(self, Robot):
-       dinosaur_attack = Robot.health - self.attack_power
-     
+    def dinosaur_attack(self, robot):
+       robot.health = robot.health - self.attack_power
+       if robot.health >= 0:
+             print("Hit Landed! {robot.name} has been damaged!")
+             robot.health = robot.health - 10
+       else:
+            print("Incoming!")
+
+
 
 
 

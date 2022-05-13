@@ -2,13 +2,13 @@ from dinosaur import Dinosaur
 
 from robot import Robot
 
-player_one = Robot()
-player_two = Dinosaur()
 
 class Battlefield:
     
     def __init__(self):
         self.name = 'Battlefield'
+        self.robot = Robot()
+        self.dinosaur = Dinosaur()
 
 
 
@@ -21,7 +21,7 @@ class Battlefield:
         #VOID FUNCTION
 
     def battle_phase(self):
-        if Robot.robot_attack and Dinosaur.health <= 50:
+        if self.robot.robot_attack and Dinosaur.health <= 50:
             print(f"Dinosaur Lost Health!")
         elif Dinosaur.dinosaur_attack and Robot.health <= 50:
             print("Robots Health is Decreasing!")
