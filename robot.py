@@ -1,18 +1,15 @@
-from dinosaur import Dinosaur
 from weapons import Weapons
 
 
 class Robot:
 
-  def __init__(self):
-    self.name = 'Hugo'
+  def __init__(self, name):
+    self.name = name
     self.health = 100
-    self.weapon = Weapons()
+    self.active_weapon = Weapons("Chainsaw", 20)
 
-  def robot_attack(self, dinosaur):
-    robot_attack = dinosaur.health - Weapons.attack_power
-  if Dinosaur.health > 0:
-    print(f"You Landed a Hit! {Dinosaur.name} is Wounded!")
-  Dinosaur.health = Dinosaur.health - 35
+  def attack(self, dinosaur):
+    dinosaur.health -= self.active_weapon.attack_power
+    print(f"Hit!! {dinosaur.name} has {dinosaur.health} !")
 
     #i want the attack power to decrease the self.health of the oppenant

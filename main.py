@@ -1,7 +1,7 @@
 #SANDBOX
 from battlefield import Battlefield
-
-run_game()
+battle = Battlefield()
+battle.run_game()
 
 
 

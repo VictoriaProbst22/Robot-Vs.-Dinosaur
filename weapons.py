@@ -1,8 +1,8 @@
 class Weapons:
   
-    def __init__(self):
-        self.name = "Chainsaw"
-        self.attack_power = 35
+    def __init__(self, name, attack_power):
+        self.name = name
+        self.attack_power = attack_power
 
    
    
